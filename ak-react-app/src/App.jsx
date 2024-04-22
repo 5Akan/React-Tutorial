@@ -3,6 +3,7 @@ function App() {
   return(
     <>
   <Card/>
+  <Card/>
   </>
   )
 }
