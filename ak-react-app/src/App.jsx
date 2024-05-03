@@ -5,15 +5,15 @@
 //             is of the correct datatype
 //            age:PropTypes.numbers
 //Default Props
-import Student from './Student.jsx'
+//Conditional Rendering = allows you to control what gets 
+//                        rendered in your application based
+//                        in your application based on certain
+//                        conditions (show,hide or change components)
+import UserGreeting from "./UserGreeting.jsx"
 function App() {
   return(
-    <>
-  <Student name="Spongebob" age = {29} isStudent = {true}/>
-  <Student name = "Patrick" age = {18} isStudent  = {false}/>
-  <Student name = "Squidward" age = {50} isStudent  = {false}/>
-  <Student name = "Sandy" age = {22} isStudent  = {true}/>
-  <Student name = "Akanimoh"/>
+  <>
+    <UserGreeting isloggedin ={true} username = "Akanimoh"/>
   </>
   )
 }
