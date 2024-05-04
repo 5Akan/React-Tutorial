@@ -13,7 +13,8 @@ import UserGreeting from "./UserGreeting.jsx"
 function App() {
   return(
   <>
-    <UserGreeting isloggedin ={true} username = "Akanimoh"/>
+    <UserGreeting isloggedin = {false} username = "Akanimoh"/>
+    <UserGreeting  isloggedin = {true}/>
   </>
   )
 }
