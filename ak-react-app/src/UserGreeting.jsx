@@ -1,5 +1,17 @@
+import propTypes from "prop-types";
+
 function userGreeting(props){
-    return(props.isloggedin ? <h2>Welcome {props.username}</h2> : <h2>Try Loginng in</h2>);
+    const welcomeMssg = <h2 className = "welcome-mssg">Welcome {props.username}</h2>;
+    const loginPrompt = <h2 className = "loggin-prompt">Try Logging in</h2>
+    return(props.isloggedin ? welcomeMssg:loginPrompt);
 }
-  
+  userGreeting.propTypes = {
+    isloggedin:propTypes.bool,
+    username:propTypes.string
+  }
+
+  userGreeting.defaultProps = {
+    isloggedin:false,
+    username:'Someone',
+  }
 export default userGreeting
