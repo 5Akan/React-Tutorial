@@ -9,12 +9,12 @@
 //                        rendered in your application based
 //                        in your application based on certain
 //                        conditions (show,hide or change components)
-import UserGreeting from "./UserGreeting.jsx"
+import List from "./List.jsx"
+
 function App() {
   return(
   <>
-    <UserGreeting isloggedin = {false} username = "Akanimoh"/>
-    <UserGreeting  isloggedin = {true}/>
+    <List/>
   </>
   )
 }
