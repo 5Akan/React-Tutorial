@@ -26,13 +26,13 @@ function App() {
       {id:3,name:"onions",calories:105},
       {id:4,name:"carrots",calories:159},
       {id:5,name:"beet",calories:35}
-      ];
+      ]; 
 
   return(
-  <>
-  {fruits.length >0 ? <List items = {fruits} category = "Fruit"/>:null}
-  {vegitables.length>0 ? <List items = {vegitables} category = "Vegitables"/>:null}
- <List/>
+  <> 
+  {fruits.length ?<List items = {fruits} category = "Fruit"/>:null}
+   {vegitables.length?<List items = {vegitables} category = "Vegitables"/>:null}
+   <List/>
     
   </>
   )

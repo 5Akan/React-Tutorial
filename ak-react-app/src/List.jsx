@@ -14,10 +14,11 @@ function List (props){
                     </li>
     )
     return (//Returns reuseable category from App.jsx and fruitlist
-        <>
-        <h3>{props.category}</h3>
-        <ul>{fruitList}</ul>
-        </>   
+     <>
+    <h3>{props.category}</h3>
+    <ul>{fruitList}</ul>
+    </>  
+       
     );
 }
 List.propTypes = {
