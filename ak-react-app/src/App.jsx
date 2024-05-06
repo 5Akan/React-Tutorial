@@ -12,9 +12,28 @@
 import List from "./List.jsx"
 
 function App() {
+  const fruits = [
+    {id:1,name:"mango",calories:95}, 
+    {id:2,name:"orange",calories:45},
+    {id:3,name:"banana",calories:105},
+    {id:4,name:"coconut",calories:159},
+    {id:5,name:"pineapple",calories:35}
+    ];
+
+    const vegitables = [
+      {id:1,name:"spinach",calories:95}, 
+      {id:2,name:"brocccoli",calories:45},
+      {id:3,name:"onions",calories:105},
+      {id:4,name:"carrots",calories:159},
+      {id:5,name:"beet",calories:35}
+      ]; 
+
   return(
-  <>
-    <List/>
+  <> 
+  {fruits.length ?<List items = {fruits} category = "Fruit"/>:null}
+   {vegitables.length?<List items = {vegitables} category = "Vegitables"/>:null}
+   <List/>
+    
   </>
   )
 }
