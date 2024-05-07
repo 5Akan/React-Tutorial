@@ -7,6 +7,7 @@ function List (props){
     // // fruits.sort((x,y) =>x.calories-y.calories)//Inverely Numerically arange calories
     // const lowCaloriesFruits = fruits.filter(fruit => fruit.calories<100)//Filter fruit less than 100 calories
     const itemList = props.items;//Contains fruit array from App.jsx
+    itemList.sort((a,b) => a.name.localeCompare(b.name));
     const fruitList = itemList.map(fruit => //Converts the array of string to an array of list elements
                     <li key = {fruit.id}>  
                         {fruit.name} &nbsp;
