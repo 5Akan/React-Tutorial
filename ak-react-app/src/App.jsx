@@ -9,14 +9,14 @@
 //                        rendered in your application based
 //                        in your application based on certain
 //                        conditions (show,hide or change components)
-import Button from './Button.jsx'
+import ProfilePic from './Profilepic.jsx'
+
 
 function App() {
   
 
   return(
-
-  <Button />
+    <ProfilePic/>
   )
 }
 // 1:29:29 Time
