@@ -9,16 +9,22 @@
 //                        rendered in your application based
 //                        in your application based on certain
 //                        conditions (show,hide or change components)
-import ProfilePic from './Profilepic.jsx'
+//ReactHook = a special function that allows functional components
+//              to use React features without writing class components
+//              (useState, useEffect, useContext, useReducer, useCallback etc)
+//useState = a react hook that allows the creation of a stateful variable
+//           AND a setter function to update in the virtual DOM
+//           [name, setName]
+import MyComponent from "./MyComponent.jsx"
 
 
 function App() {
   
 
   return(
-    <ProfilePic/>
+    <MyComponent />
   )
 }
-// 1:29:29 Time
+// Time
 export default App
 //npm run dev
