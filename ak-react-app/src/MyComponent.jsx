@@ -11,7 +11,7 @@ const updateAge = () => {
 setAge(age + 1)
 }
 const updateEmployment = () =>{
-    setIsEmployed(true);
+    setIsEmployed(!isEmployed);
 }
 
 return (
