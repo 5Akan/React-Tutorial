@@ -15,14 +15,18 @@
 //useState = a react hook that allows the creation of a stateful variable
 //           AND a setter function to update in the virtual DOM
 //           [name, setName]
-import Counter from "./Counter.jsx"
+//onChange = event handler used primarily with form elements
+//           ex. <input> <textarea> <select> <radio>
+//           triggers a function every time the value of the 
+//           input chanages
+import Hookexample from "./HookExample.jsx"
 
 
 function App() {
   
 
   return(
-    <Counter />
+    <Hookexample />
   )
 }
 // Time
