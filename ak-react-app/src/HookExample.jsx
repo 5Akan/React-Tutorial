@@ -4,6 +4,7 @@ function Hookexample() {
     const [quantity,setQuantity] = useState(0);
     const [comment,setComment ] = useState("");
     const [payment,setPayment] = useState("");
+    const [shipping,setShipping] = useState("");
 
     function handleNameChange(e) {
         setName(e.target.value);
@@ -17,6 +18,9 @@ function Hookexample() {
     }
     function handlePaymentChange(event){
         setPayment(event.target.value)
+    }
+    function handleShippingChange(event){
+        setShipping(event.target.value)
     }
 
     return (<div>
@@ -34,6 +38,24 @@ function Hookexample() {
                 <option value="giftcard">Giftcard</option>
             </select>
             <p>Payment: {payment}</p>
+
+            <label>
+                <input type="radio" 
+                value="Pick up"
+                checked = {shipping === "Pick up"} 
+                onChange = {handleShippingChange}
+                />
+                Pick up
+            </label>
+            <label>
+            <input type="radio" 
+                value="Delivery"
+                checked = {shipping === "Delivery"} 
+                onChange = {handleShippingChange}/>
+                Delivery
+            </label>
+            <p>Shipping:{shipping}</p>
+            
           </div>)
 }
 
