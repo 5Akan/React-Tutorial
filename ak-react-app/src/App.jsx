@@ -19,14 +19,17 @@
 //           ex. <input> <textarea> <select> <radio>
 //           triggers a function every time the value of the 
 //           input chanages
-import Hookexample from "./HookExample.jsx"
+import Colorpicker from "./Colorpicker.jsx"
 
 
 function App() {
   
 
   return(
-    <Hookexample />
+    <>
+    <Colorpicker />
+    </>
+    
   )
 }
 // Time
