@@ -32,7 +32,7 @@ function colorPicker(params) {
                 <p>Selected Colour: {color}</p>
             </div>        
             <label>Select a Colour</label>
-            <input type="color" value={color} onChange = {handleColor}/>
+            <input type="color"  value = {color} onChange = {handleColor}/>
         </div>
         
         </>

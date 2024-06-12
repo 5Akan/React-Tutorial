@@ -19,7 +19,14 @@
 //           ex. <input> <textarea> <select> <radio>
 //           triggers a function every time the value of the 
 //           input chanages
-import Colorpicker from "./Colorpicker.jsx"
+//Updater function = A function passed as an arguement to setState() usually
+//                  ex. setYear(year + 1)
+              //    ex. setYear(updater function or arror function )
+              //    Allow for safe updates based on the prevous state 
+              //    Used with multiple state updates and asynchronous functions
+              //    Good practice to use updater function
+
+import MyComponent from "./MyComponent.jsx"
 
 
 function App() {
@@ -27,7 +34,7 @@ function App() {
 
   return(
     <>
-    <Colorpicker />
+    <MyComponent />
     </>
     
   )
