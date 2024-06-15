@@ -26,7 +26,7 @@
               //    Used with multiple state updates and asynchronous functions
               //    Good practice to use updater function
 
-import MyComponent from "./MyComponent.jsx"
+import UpdateObject from "./UpdateObject.jsx"
 
 
 function App() {
@@ -34,7 +34,7 @@ function App() {
 
   return(
     <>
-    <MyComponent />
+    <UpdateObject />
     </>
     
   )
