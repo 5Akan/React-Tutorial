@@ -26,7 +26,7 @@
               //    Used with multiple state updates and asynchronous functions
               //    Good practice to use updater function
 
-import UpdateObject from "./UpdateObject.jsx"
+import UpdateStateofArray from "./UpdateStateofArray.jsx"
 
 
 function App() {
@@ -34,7 +34,7 @@ function App() {
 
   return(
     <>
-    <UpdateObject />
+    <UpdateStateofArray />
     </>
     
   )
