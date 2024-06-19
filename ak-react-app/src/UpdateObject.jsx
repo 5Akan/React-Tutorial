@@ -7,15 +7,15 @@ function UpdateObject(params) {
         model:"mustange"});
 
        function updateYear(e){
-        setCar(car =>({...car, year:e.target.value}));
+        setCar(c =>({...c, year:e.target.value}));
        }
 
        function updateMake(e){
-        setCar(e.target.value);
+        setCar(c=>({...c,make:e.target.value}));
        }
 
        function updateModel(e){
-        setCar(e.target.value);
+        setCar(c=>({...c,model:e.target.value}));
        }
 
     return(<div>
