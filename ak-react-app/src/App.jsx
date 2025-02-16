@@ -26,7 +26,9 @@
               //    Used with multiple state updates and asynchronous functions
               //    Good practice to use updater function
 
-import UpdateStateofArray from "./UpdateStateofArray.jsx"
+
+
+import UpdateStateofArray from "./UpdateStateofArray.jsx";
 
 
 function App() {
@@ -39,6 +41,6 @@ function App() {
     
   )
 }
-// Time
+// // Time
 export default App
 //npm run dev

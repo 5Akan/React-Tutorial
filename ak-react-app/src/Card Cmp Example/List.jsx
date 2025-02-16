@@ -1,6 +1,6 @@
 import propTypes from "prop-types";
 function List (props){
-    
+    //just for upload
     // fruits.sort((x,y) =>x.name.localeCompare(y.name))//Alphabetially compare names
     // // fruits.sort((x,y) =>y.name.localeCompare(x.name))// Inversely Alphabetially compare names
     // // fruits.sort((x,y) =>x.calories-y.calories)//Numerically arange calories
@@ -8,6 +8,7 @@ function List (props){
     // const lowCaloriesFruits = fruits.filter(fruit => fruit.calories<100)//Filter fruit less than 100 calories
     const itemList = props.items;//Contains fruit array from App.jsx
     itemList.sort((a,b) => a.name.localeCompare(b.name));
+    //map method will creat a new array (FruitList after passing it through the function)
     const fruitList = itemList.map(fruit => //Converts the array of string to an array of list elements
                     <li key = {fruit.id}>  
                         {fruit.name} &nbsp;
@@ -33,3 +34,6 @@ List.defaultProps = {
     category:"None"
 }
 export default List 
+
+//time 1 hour;3mins
+

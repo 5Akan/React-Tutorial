@@ -1,5 +1,5 @@
 //Updater function = A function passed as an arguement to setState() usually
-//                  EG. instead of normal  setYear(year + 1)
+//                  EG. instead of normal  setYear(Y => y + 1)
               //    we use  setYear(updater function or arror function )
               //    Allow for safe updates based on the prevous state 
               //    Used with multiple state updates and asynchronous functions

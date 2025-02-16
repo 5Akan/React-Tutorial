@@ -4,7 +4,7 @@ function UpdateObject(params) {
     const [car,setCar] = useState({
         year:2024,
         make:"ford",
-        model:"mustange"});
+        model:"mustang"});
 
        function updateYear(e){
         setCar(c =>({...c, year:e.target.value}));

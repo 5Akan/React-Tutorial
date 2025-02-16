@@ -14,29 +14,29 @@
         //the color variable
         
 
-
-import React,{useState} from "react"
-function colorPicker(params) {
-    const [color, setColor] = useState("#ffffff");
-
-    function handleColor(event) {
-        setColor(event.target.value)
+import React, {useState} from 'react';
+function Colorpicker(){
+    const [color,useColor] = useState("#ffffff");
+    const handleColorChange = (e) =>{
+        console.log(e.target.value);
+        useColor(e.target.value);
     }
 
-    return(
-        <>
-        <div className="color-picker-container">
-            <h1>Color Picker</h1>
-            <div className="color-display" style={{backgroundColor:color}}>
-                
-                <p>Selected Colour: {color}</p>
-            </div>        
-            <label>Select a Colour</label>
-            <input type="color"  value = {color} onChange = {handleColor}/>
-        </div>
-        
-        </>
-    )
-}
+return(
+    <div className='main'>
+        <p>Colour Picker</p>
+        <div className='colour-container' style = {{backgroundColor:color}}>
+        Where there is change
 
-export default colorPicker
+        </div>
+        <input type="color" value = {color} onChange = {handleColorChange}/>
+    </div>
+)}
+
+
+
+
+export default Colorpicker
+//2:12
+
+//
