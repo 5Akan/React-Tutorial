@@ -28,7 +28,7 @@
 
 
 
-import UpdateStateofArray from "./UpdateStateofArray.jsx";
+import UpdateArrayofObjState from "./UpdateArrayofObjState.jsx";
 
 
 function App() {
@@ -36,7 +36,7 @@ function App() {
 
   return(
     <>
-    <UpdateStateofArray />
+    <UpdateArrayofObjState />
     </>
     
   )
