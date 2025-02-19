@@ -28,7 +28,7 @@
 
 
 
-import UpdateArrayofObjState from "./UpdateArrayofObjState.jsx";
+import Todo from "./todo list/Todo.jsx";
 
 
 function App() {
@@ -36,7 +36,7 @@ function App() {
 
   return(
     <>
-    <UpdateArrayofObjState />
+    <Todo />
     </>
     
   )
