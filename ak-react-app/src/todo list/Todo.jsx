@@ -15,7 +15,7 @@ function handleDeleteTask(index) {
 function handleMoveUp() {
     
 }
-
+//For tomorrow
 function handleMoveDown() {
     
 }
@@ -31,10 +31,14 @@ function handleMoveDown() {
                  <ol>
                     {tasks.map((task,index)=>
                    <li key={index}>
-                         {task}
-                         <button onClick={handleDeleteTask}>Delete</button>
-                         <button onClick={handleMoveUp}>Move Up</button>
-                         <button onClick={handleMoveDown}>Move Down</button>
+                       <span className='text'>{task}</span>
+                         
+                         <button className='delete'
+                         onClick={handleDeleteTask}>Delete</button>
+                         <button className='move-up'
+                          onClick={handleMoveUp}>Move Up</button>
+                         <button className='move-down'
+                         onClick={handleMoveDown}>Move Down</button>
                    </li>)}
                  </ol>
             </div>
@@ -43,3 +47,5 @@ function handleMoveDown() {
 }
 
 export default Todo
+//3:00:00
+//3:11
