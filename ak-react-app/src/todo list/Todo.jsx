@@ -1,5 +1,6 @@
 import React,{useState} from 'react';
 
+
 function Todo() {
 const [tasks,setTasks] = useState(['go home','dont run']);
 const [newtask,setNewTask] = useState();
@@ -7,37 +8,55 @@ const [newtask,setNewTask] = useState();
 function handleAddTask(event) {
     setNewTask(event.target.value)
 }
+function addTask() {
+    if (newtask.trim()!=="") {//trim method removes white space
+        setTasks(t=>[...t,newtask]);
+        setNewTask('');  
+    }
+    
+}
 
 function handleDeleteTask(index) {
-    
+    setTasks(tasks.filter((_,i)=>i != index))
 }
 
-function handleMoveUp() {
+function handleMoveUp(index) {
+    if (index>0) {
+
+      const updateTask = [...tasks];
+         [updateTask[index],updateTask[index-1]]=//destructuring took place here
+        [updateTask[index-1],updateTask[index]];
+        setTasks(updateTask);
+    }
+
+    
     
 }
-//For tomorrow
 function handleMoveDown() {
     
 }
 
     return(
-        <div className='todo-list'>
-            <h2>Todo List</h2>
+        <div className='to-do-list'>
+            <h1>To-do-List</h1>
             <div>
-                <input value={newtask}
+                <input type='text'
+                 value={newtask}
                  placeholder="Enter your tasks..."
                  onChange={handleAddTask}
                  />
+                 <button 
+                 className='add-button'
+                 onClick={addTask}>Add</button>
                  <ol>
                     {tasks.map((task,index)=>
                    <li key={index}>
                        <span className='text'>{task}</span>
-                         
-                         <button className='delete'
-                         onClick={handleDeleteTask}>Delete</button>
-                         <button className='move-up'
-                          onClick={handleMoveUp}>Move Up</button>
-                         <button className='move-down'
+                         <button className='delete-button'
+                          onClick={()=> handleDeleteTask(index)}>Delete</button>
+                         <button className='move-button'
+                          onClick={()=> handleMoveUp(index)}>Move Up</button>
+                         <button className='move-button'
                          onClick={handleMoveDown}>Move Down</button>
                    </li>)}
                  </ol>
