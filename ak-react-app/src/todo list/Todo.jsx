@@ -2,37 +2,39 @@ import React,{useState} from 'react';
 
 
 function Todo() {
-const [tasks,setTasks] = useState(['go home','dont run']);
+const [tasks,setTasks] = useState([]);
 const [newtask,setNewTask] = useState();
 
 function handleAddTask(event) {
     setNewTask(event.target.value)
 }
 function addTask() {
-    if (newtask.trim()!=="") {//trim method removes white space
+    if (newtask.trim() !== "") { //trim method removes white space
         setTasks(t=>[...t,newtask]);
         setNewTask('');  
     }
     
 }
-
 function handleDeleteTask(index) {
     setTasks(tasks.filter((_,i)=>i != index))
 }
-
 function handleMoveUp(index) {
     if (index>0) {
 
       const updateTask = [...tasks];
-         [updateTask[index],updateTask[index-1]]=//destructuring took place here
+        [updateTask[index],updateTask[index-1]] =//destructuring took place here
         [updateTask[index-1],updateTask[index]];
         setTasks(updateTask);
     }
-
-    
-    
 }
-function handleMoveDown() {
+function handleMoveDown(index) {
+    if(tasks.length - 1>index){
+        const updateTask = [...tasks];
+        [updateTask[index],updateTask[index + 1]] =//destructuring took place here
+        [updateTask[index + 1],updateTask[index]];
+        setTasks(updateTask);
+    }
+        
     
 }
 
@@ -57,7 +59,7 @@ function handleMoveDown() {
                          <button className='move-button'
                           onClick={()=> handleMoveUp(index)}>Move Up</button>
                          <button className='move-button'
-                         onClick={handleMoveDown}>Move Down</button>
+                         onClick={() => handleMoveDown(index)}>Move Down</button>
                    </li>)}
                  </ol>
             </div>
@@ -67,4 +69,4 @@ function handleMoveDown() {
 
 export default Todo
 //3:00:00
-//3:11
+//3:23:23
