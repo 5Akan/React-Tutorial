@@ -28,7 +28,7 @@
 
 
 
-import Todo from "./todo list/Todo.jsx";
+import UseEffectComponent from "./todo list/UseEffectComponent.jsx";
 
 
 
@@ -37,7 +37,7 @@ function App() {
 
   return(
     <>
-    <Todo />
+    <UseEffectComponent />
     </>
     
   )
