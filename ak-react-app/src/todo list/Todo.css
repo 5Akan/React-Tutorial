@@ -1,6 +1,6 @@
-body{
-    background-color: hsl(0, 9%, 21%);
-}
+/* body{
+    /* background-color: hsl(0, 9%, 21%); 
+} */
 .to-do-list{
     font-family: Arial, sans-serif;
     text-align: center;
@@ -11,7 +11,7 @@ h1{
     font-size: 4rem;
     color: hsl(0, 0%, 97%);
 }
-button{
+/* button{
     font-size: 1.7rem;
     font-weight: bold;
     padding: 10px 20px;
@@ -20,7 +20,7 @@ button{
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.5s ease;
-}
+} */
 
 .add-button{
     background-color: hsl(240, 84%, 66%);
