@@ -28,7 +28,7 @@
 
 
 
-import UseEffectComponent from "./todo list/UseEffectComponent.jsx";
+import UseEffectExample from "./todo list/UseEffectExample.jsx";
 
 
 
@@ -37,7 +37,7 @@ function App() {
 
   return(
     <>
-    <UseEffectComponent />
+    <UseEffectExample />
     </>
     
   )
