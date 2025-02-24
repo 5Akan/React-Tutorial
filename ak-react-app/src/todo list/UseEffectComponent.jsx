@@ -24,6 +24,12 @@ function UseEffectComponent() {
     const [color, setColor] = useState('green');
     useEffect(() =>{
         document.title = `Count: ${count} ${color}`;
+
+        return() =>{
+            //SOME CLEANUP CODE
+            //runs after it unmounts or before the next re-render depending
+            //on the type of useEffect
+        }
     },[count,color])
 
     function addButton() {
@@ -39,7 +45,7 @@ function UseEffectComponent() {
     }
 
 return(<>
-    <p style={{color:color}}>Count: {count} {color}</p>
+    <p style={{color:color}}>Count: {count} </p>
     <button onClick={addButton}>Add</button>
     <button onClick={subtractButton}>Subtract</button>
     <button onClick={changeColor}>Change Color</button>
