@@ -25,19 +25,32 @@
               //    Allow for safe updates based on the prevous state 
               //    Used with multiple state updates and asynchronous functions
               //    Good practice to use updater function
+//useEffect = React Hook that tells React DO SOME CODE WHEN (pick one):
+//            This component re-renders
+//            This component mounts
+//            The state of a value
 
+// useEffect(function, [dependencies])
 
+// 1. useEffect(() => {})               //Runs after every re-rendering
+// 2. useEffect(() => {}, [])           //Runs only on mount
+// 3. useEffect(() => {}, [value])      //Runs on mount + when value changes
 
-import UseEffectExample from "./todo list/UseEffectExample.jsx";
+//USES
+// #1 Event Listeners
+// #2 DOM manipulation
+// #3 Subscriptions (real-time updates)
+// #4 Fetch Data from an API
+// #5 Clean up when a component unmounts
 
+import DigitalClock from "./DigitalClock.jsx";
 
 
 function App() {
-  
 
   return(
     <>
-    <UseEffectExample />
+    <DigitalClock />
     </>
     
   )
