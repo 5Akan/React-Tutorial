@@ -57,15 +57,23 @@
 //1. import React, {useContext} from 'react'
 // import {MyContext} from './ComponentA'
 //2. const value = useContext(Mycontext);
-import ComponentA from "./ComponentA.jsx";
+
+//useState = Re-rendering the component when the state value changes
+
+//useRef() = "use Reference" does not cause re-renders when its value changes
+//            When you want a component to "remember" some information,
+//            but you dont want that information to trigger new renders
+
+//            1. Accessing /interacting with DOM elements
+//            2. Handling Focus, Animation and Transitions
+//            3. Managing timers and intervals
+import MyComponent from "./MyComponenent.jsx";
 
 function App() {
-
-
-
+ 
   return(
     <>
-     <ComponentA />
+     <MyComponent/>
     </>
     
   )
