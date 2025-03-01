@@ -12,23 +12,54 @@ import React, {useState,useEffect, useRef} from "react";
 
 
 function MyComponent() {
+     const inputRef1 = useRef(null);
+     const inputRef2 = useRef(null);
+     const inputRef3 = useRef(null);
 
-    const ref = useRef(0);
+
     useEffect(()=>{
         console.log("Rendering has occured")
     })
 
-    function handleNumberCount() {
-       ref.current ++;
-       console.log( ref.current)
+    function handleNumberCount1() {
+       inputRef1.current.focus();
+       inputRef1.current.style.backgroundColor = "grey";
+       inputRef2.current.style.backgroundColor = "";
+       inputRef3.current.style.backgroundColor = "";
     }
 
-    const [number, setNumber] = useState(0);
+    function handleNumberCount2() {
+        inputRef2.current.focus();
+        inputRef2.current.style.backgroundColor = "yellow";
+        inputRef1.current.style.backgroundColor = "";
+        inputRef3.current.style.backgroundColor = "";
+     }
+     function handleNumberCount3() {
+        inputRef3.current.focus();
+        inputRef3.current.style.backgroundColor = "violet";
+        inputRef2.current.style.backgroundColor = "";
+        inputRef1.current.style.backgroundColor = "";
+        
+     }
+
     return(
         <>
-         <button onClick={handleNumberCount}>
-             CLICK ME {ref.current}
-        </button>
+        <div>
+        <button onClick={handleNumberCount1}>
+             CLICK ME 1
+        </button><br/>
+        <input ref ={inputRef1} /><br/>
+        <button onClick={handleNumberCount2}>
+             CLICK ME 2
+        </button><br/>
+        <input ref ={inputRef2} /><br/>
+        <button onClick={handleNumberCount3}>
+             CLICK ME 3
+        </button><br/>
+        <input ref ={inputRef3} /><br/>
+
+        </div>
+        
         </>
    
     )
