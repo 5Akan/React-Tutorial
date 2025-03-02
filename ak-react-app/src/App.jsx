@@ -67,13 +67,13 @@
 //            1. Accessing /interacting with DOM elements
 //            2. Handling Focus, Animation and Transitions
 //            3. Managing timers and intervals
-import MyComponent from "./MyComponenent.jsx";
+import StopWatch from "./StopWatch.jsx";
 
 function App() {
  
   return(
     <>
-     <MyComponent/>
+     <StopWatch/>
     </>
     
   )
