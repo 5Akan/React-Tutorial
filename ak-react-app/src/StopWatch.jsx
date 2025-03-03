@@ -8,24 +8,31 @@ function StopWatch() {
     const startTime = useRef(0);
 
     useEffect(()=>{
-        
+        if(isRunning){
+            intervalIdRef.current = setInterval(()=>{
+                setElapsedtime(Date.now()-startTime.current)
+            },10)
+        }
 
     },[isRunning])
 
     function start() {
-        
+        setIsrunning(true);
+        startTime.current = Date.now() - elapsedTime;
+       console.log(Date.now())
     }
 
     function stop() {
-        
+        setIsrunning(false);
     }
 
     function reset() {
-        
+        setIsrunning(false);
+        setElapsedtime(0)
     }
 
     function formatTime() {
-        return '00 : 00 : 00'
+        return '00:00:00'
     }
     
     return(
