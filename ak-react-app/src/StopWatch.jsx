@@ -14,12 +14,15 @@ function StopWatch() {
             },10)
         }
 
+        return ()=>{
+            clearInterval( intervalIdRef.current);
+        }
     },[isRunning])
 
     function start() {
         setIsrunning(true);
         startTime.current = Date.now() - elapsedTime;
-       console.log(Date.now())
+       console.log(Date.now());
     }
 
     function stop() {
@@ -28,11 +31,15 @@ function StopWatch() {
 
     function reset() {
         setIsrunning(false);
-        setElapsedtime(0)
+        setElapsedtime(0);
     }
 
     function formatTime() {
-        return '00:00:00'
+        let hours = Math.floor((elapsedTime) / 1000 * 60 * 60);
+        let minutes = Math.floor((elapsedTime / (1000 * 60))% 60);
+        let seconds = Math.floor((elapsedTime / 1000 )% 60);
+        let milliseconds = Math.floor((elapsedTime % 1000 )/10);
+        return `${minutes}:${seconds}:${milliseconds}`
     }
     
     return(
