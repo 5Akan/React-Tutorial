@@ -74,6 +74,8 @@ function App() {
   return(
     <>
      <StopWatch/>
+     <StopWatch/>
+     <StopWatch/>
     </>
     
   )

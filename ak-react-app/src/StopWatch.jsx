@@ -22,7 +22,6 @@ function StopWatch() {
     function start() {
         setIsrunning(true);
         startTime.current = Date.now() - elapsedTime;
-       console.log(Date.now());
     }
 
     function stop() {
@@ -39,7 +38,15 @@ function StopWatch() {
         let minutes = Math.floor((elapsedTime / (1000 * 60))% 60);
         let seconds = Math.floor((elapsedTime / 1000 )% 60);
         let milliseconds = Math.floor((elapsedTime % 1000 )/10);
-        return `${minutes}:${seconds}:${milliseconds}`
+        
+        return `${padZero(minutes)}:${padZero(seconds)}:${padZero(milliseconds)}`
+        //OR use this 
+        // minutes = String(minutes).padStart(2, "0");
+       
+    }
+
+    function padZero(numbers) {
+        return (numbers < 10 ? '0':"") + numbers;
     }
     
     return(
