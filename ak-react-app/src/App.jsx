@@ -67,15 +67,14 @@
 //            1. Accessing /interacting with DOM elements
 //            2. Handling Focus, Animation and Transitions
 //            3. Managing timers and intervals
-import StopWatch from "./StopWatch.jsx";
+import Counter from "./Counter.jsx";
 
 function App() {
  
   return(
     <>
-     <StopWatch/>
-     <StopWatch/>
-     <StopWatch/>
+     <Counter/>
+  
     </>
     
   )
